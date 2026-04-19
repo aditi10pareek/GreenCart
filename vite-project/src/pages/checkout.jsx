@@ -52,7 +52,7 @@ export default function Checkout() {
         deliveryOption: deliverySpeed === 'green' ? 'Green' : 'Normal'
       };
 
-      await axios.post('http://localhost:5000/api/orders', orderData);
+      await axios.post(`${API_URL}/api/orders`, orderData);
       alert('Order placed successfully! Thank you for choosing GreenCart.');
       localStorage.removeItem("greenCart");
       navigate('/');

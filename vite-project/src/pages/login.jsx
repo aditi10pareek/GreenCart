@@ -6,6 +6,8 @@ import { GoogleLogin } from '@react-oauth/google';
 import '../styles/login.css';
 import '../styles/style.css';
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 export default function Login() {
   const [activeTab, setActiveTab] = useState('login');
   const [loading, setLoading] = useState(false);
@@ -35,7 +37,7 @@ export default function Login() {
     setLoading(true);
     try {
       const cleanEmail = formData.email.trim().toLowerCase();
-      const res = await axios.post('http://localhost:5000/api/users/login', {
+      const res = await axios.post(`${API_URL}/api/users/login`, {
         email: cleanEmail,
         password: formData.password
       });
@@ -54,7 +56,7 @@ export default function Login() {
     if (e) e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/users/send-otp', {
+      await axios.post(`${API_URL}/api/users/send-otp`, {
         email: formData.email.trim().toLowerCase()
       });
       setRegisterStep(2);
@@ -70,7 +72,7 @@ export default function Login() {
     if (e) e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/users/verify-otp', {
+      await axios.post(`${API_URL}/api/users/verify-otp`, {
         email: formData.email.trim().toLowerCase(),
         otp
       });
@@ -87,7 +89,7 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/users/register', {
+      const res = await axios.post(`${API_URL}/api/users/register`, {
         name: formData.name,
         email: formData.email.trim().toLowerCase(),
         password: formData.password,
@@ -107,7 +109,7 @@ export default function Login() {
   const handleGoogleSuccess = async (credentialResponse) => {
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/users/google', {
+      const res = await axios.post(`${API_URL}/api/users/google`, {
         token: credentialResponse.credential
       });
       alert('Google Login Successful! Welcome.');

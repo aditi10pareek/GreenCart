@@ -3,6 +3,8 @@ import { Search, Filter, Leaf } from "lucide-react";
 import productsData from "../data/products.json";
 import ProductCard from "./productCard";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 function ProductSection({ cart, setCart }) {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -11,7 +13,7 @@ function ProductSection({ cart, setCart }) {
 
   // Load products
   useEffect(() => {
-    fetch('http://localhost:5000/api/products')
+    fetch(`${API_URL}/api/products`)
       .then(res => res.json())
       .then(data => {
         if (data && data.length > 0) {
