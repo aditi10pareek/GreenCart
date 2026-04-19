@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "69d150e0bc58a734806ad09a",
+    "name": "aditi pareek",
+    "email": "aditipareek103@gmail.com",
+    "password": "$2b$10$RCwzsBIkE8Q7U/bd27JYWOvD3XfH5o3U5i1zaQK/4TeJK1V1uRewG",
+    "totalCarbonSaved": 0,
+    "ecoFriendlyPurchases": 0,
+    "__v": 0
+  },
+  {
+    "_id": "69d2442252b973f840cf5295",
+    "name": "Test User",
+    "email": "test@test.com",
+    "password": "$2b$10$huF71oZ5V.aSUTdd3I8tHe5HlJKU.eYYCdAl5ZDBYnJNgnznz01FW",
+    "totalCarbonSaved": 0,
+    "ecoFriendlyPurchases": 0,
+    "__v": 0
+  },
+  {
+    "_id": "69d244a452b973f840cf5296",
+    "name": "Browser Agent",
+    "email": "agent@example.com",
+    "password": "$2b$10$PykCCuDmwSdLXblp162W8ejtJwMzPfBZgQK7QwEkI62elIi4sOX9.",
+    "totalCarbonSaved": 0,
+    "ecoFriendlyPurchases": 0,
+    "__v": 0
+  },
+  {
+    "_id": "69d246ca52b973f840cf5297",
+    "name": "Test User 2",
+    "email": "test2@test.com",
+    "password": "$2b$10$YNg6VbiIkgSHg9owQNPLEOwtnTk1/JmhGOzUenzffbRaTEJDpfKE6",
+    "totalCarbonSaved": 0,
+    "ecoFriendlyPurchases": 0,
+    "__v": 0
+  }
+]
